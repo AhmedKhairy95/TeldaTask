@@ -1,0 +1,20 @@
+{
+  "jobs": [
+    {
+      "identifier": "job1",
+      "path": "tests.periodic_functions.functions",
+      "function_name": "func1",
+      "timeout": "5s",
+      "periodicity": "1s",
+      "start_date": "2022-11-21"
+    },
+    {
+      "identifier": "job2",
+      "path": "tests.periodic_functions.functions",
+      "function_name": "print_string",
+      "timeout": "20s",
+      "periodicity": "5s",
+      "start_date": "2022-11-21"
+    }
+  ]
+}

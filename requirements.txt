@@ -1,0 +1,8 @@
+pydantic==1.10.2
+PyYAML==6.0
+pykka==3.1.1
+uvicorn==0.20.0
+pytest
+coverage
+aiologger==0.7.0
+aiologger[aiofiles]
