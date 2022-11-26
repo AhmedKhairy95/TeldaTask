@@ -26,6 +26,8 @@ The Cron-Scheduler is built using 4 Actors
 2. informs the task monitor that the execution is done
 3. propagates the logs buffered to the task monitor actor
 
+You can also have a look on this [Miro board](https://miro.com/app/board/uXjVP_2S3wg=/?share_link_id=644427807292) for the design overview
+
 The Cron-Scheduler has a single point of entry which the method **launch_scheduler** located in launcher.py
 
 
@@ -94,3 +96,7 @@ ___
 3. In production, logs can be streamed to a cloud logging service (such as **GCP Logs Explorer**) or get pushed to **Datadog** to provide observability when certain conditions occur
 4. Persisting the scheduler's state to provide Fault Tolerance
 5. In production, we can use Apache Kafka as our messaging queue to avoid out of memory exceptions related to unbounded mailbox, this would also help us in monitoring our Actors by checking the consumer group lag which would in turn help us decide if we need to scale our Actor
+6. We can also use Apache Kafka as a job submitter, where we can create a new actor which consumes from a jobs topic and sends events to the scheduler actor when a new job gets submitted
+
+
+And you can also check this [Miro Board](https://miro.com/app/board/uXjVP_2S378=/?share_link_id=403730756861) for production prototype
